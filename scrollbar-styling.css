@@ -1,0 +1,20 @@
+/* General Scrollbar styling used on this site: */
+
+/* Styling the main scrollbar */
+::-webkit-scrollbar {
+    width: 15px; /* Set the width of the scrollbar */
+}
+
+/* Styling the track (the area the thumb moves on) of the scrollbar */
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, .05); /* Set the background color with slight transparency */
+    -webkit-border-radius: 20px; /* Set border radius for WebKit browsers */
+    border-radius: 20px; /* Set border radius for other browsers */
+}
+
+/* Styling the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 20px; /* Set border radius for WebKit browsers */
+    border-radius: 20px; /* Set border radius for other browsers */
+    background: rgb(54, 49, 49); /* Set the background color of the thumb */
+}

@@ -1,0 +1,28 @@
+<!-- Start seamless-pagination custom code for webflow -->
+
+<!-- Include the jQuery Pjax library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+<script>
+  // Specify the container selector where the content will be replaced during page transitions
+  var containerSelector = '#portfolio';
+
+  // Initialize Pjax on the specified links within the container
+  $(document).pjax(
+    '.w-pagination-wrapper a',  // Links that trigger Pjax navigation
+    containerSelector,          // Container where content will be replaced
+    {
+      container: containerSelector,  // Specify the container again
+      fragment: containerSelector,   // Specify the fragment to update
+      scrollTo: false,               // Disable scrolling to the top after transition
+      timeout: 2500,                 // Set the maximum time for the transition to complete (in milliseconds)
+    }
+  );
+
+  // Reinitialize Webflow interactions when Pjax transition ends
+  $(document).on('pjax:end', function() {
+    Webflow.require('ix2').init();  // Reinitialize interactions using Webflow's IX2 (Interactions 2.0)
+  });
+</script>
+
+<!-- End seamless-pagination custom code -->
