@@ -1,0 +1,91 @@
+# 
+# Django
+# 
+
+
+# Install project dependencies based on the Pipfile and Pipfile.lock files in a Python project
+~$ pipenv install
+
+# Activate the virtual environment using pipenv shell:
+# The pipenv shell command doesn't create a new Python interpreter; instead, it activates an existing virtual environment associated with your project. When you # run pipenv shell, it looks for an existing virtual environment in your project (created by pipenv install) and activates it.
+~$ pipenv shell
+
+# Install Django:
+~$ pipenv install django
+
+# Install Djoser (Token Authentication):
+~$ pip install djoser # token
+
+
+#
+# Database
+#
+
+# Install MySQL Client:
+~$ pipenv install mysqlclient 
+
+# Installs psycopg2-binary, which is a PostgreSQL adapter for Python. The version number 2.10.0
+~$ pipenv install psycopg2-binary==2.10.0
+
+#
+# Additional Packages:
+#
+
+# Install Django Rest Framework:
+~$ pip install djangorestframework
+
+# This package allows your Django REST framework API to support XML as an input and output format in addition to the default JSON.
+~$ pip install djangorestframework-xml
+
+# Markdown support for the browsable API.
+~$ pip install markdown 
+
+# Filtering suppo
+~$ pip install django-filter 
+
+# Django to allow requests from your Next.js domain
+# Install Django CORS Headers:
+~$ pip install django-cors-headers
+
+
+#
+# Additional:
+#
+
+# Once you are inside the virtual environment, you can use Python commands to check information about the Python interpreter and virtual environment. For example:
+# To check the Python version:
+~$ python --version
+
+# To check the path to the Python interpreter:
+~$ which python
+
+# Create a Virtual Environment with a Specific Python Version:
+~$ pipenv --python 3.x
+
+# Update Python in an Existing Virtual Environment:
+~$ pipenv update --python 3.x
+
+# exit pipenv shell
+~$ Ctrl + D
+
+#
+# start a Django project and app:
+#
+
+# Start a new Django project:
+~$ django-admin startproject <name of project>
+
+# Change into the project directory:
+~$ cd <name of project>
+
+# Start a new Django app within the project:
+~$ python3 manage.py startapp <name of app>
+
+# Apply initial migrations (create the database tables):
+~$ python3 manage.py migrate
+
+# Create a superuser (optional, for the Django admin):
+~$ python3 manage.py createsuperuser
+
+# Start the development server:
+~$ python3 manage.py runserver
