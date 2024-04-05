@@ -18,16 +18,6 @@
 
 
 #
-# Database
-#
-
-# Install MySQL Client:
-~$ pipenv install mysqlclient 
-
-# Installs psycopg2-binary, which is a PostgreSQL adapter for Python. The version number 2.10.0
-~$ pipenv install psycopg2-binary==2.10.0
-
-#
 # Additional Packages:
 #
 
@@ -35,7 +25,10 @@
 ~$ pip install djangorestframework
 
 # This package allows your Django REST framework API to support XML as an input and output format in addition to the default JSON.
+#xml
 ~$ pip install djangorestframework-xml
+#csv
+~$ pipenv install djangorestframework-csv
 
 # Markdown support for the browsable API.
 ~$ pip install markdown 
@@ -49,12 +42,18 @@
 
 
 #
-# Additional:
+# Additional interpreter:
 #
 
 # Once you are inside the virtual environment, you can use Python commands to check information about the Python interpreter and virtual environment. For example:
 # To check the Python version:
 ~$ python --version
+
+Python select interpreter
+CTRL+Shift+P
+
+What selected interpreter:
+/useer/local/bin/python3
 
 # To check the path to the Python interpreter:
 ~$ which python
@@ -82,6 +81,7 @@
 ~$ python3 manage.py startapp <name of app>
 
 # Apply initial migrations (create the database tables):
+~$ python3 manage.py makemigrations
 ~$ python3 manage.py migrate
 
 # Create a superuser (optional, for the Django admin):
@@ -89,3 +89,12 @@
 
 # Start the development server:
 ~$ python3 manage.py runserver
+
+# Django debug toolbar
+~$ pipenv install django-debug-toolbar
+
+# Change the port
+~$ python3 manage.py runserver 9000
+
+# Mac this port is already running....
+~$ sudo lsof -t -i tcp:8000 | xargs kill -9
