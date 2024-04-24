@@ -102,5 +102,9 @@ What selected interpreter:
 # Change the port
 ~$ python3 manage.py runserver 9000
 
+# Pillow, which is a required dependency for handling images in 
+# Django, is not installed. Pillow is a Python Imaging Library (PIL) # fork, which adds support for opening, manipulating, and saving many # different image file formats.
+~$ python -m pip install Pillow
+
 # Mac this port is already running....
 ~$ sudo lsof -t -i tcp:8000 | xargs kill -9
