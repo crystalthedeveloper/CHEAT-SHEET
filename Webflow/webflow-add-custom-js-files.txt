@@ -14,6 +14,9 @@ npm i parcel
 // Add the Local Server to Your Webflow Project
 ~$ <script src="http://localhost:1234/app.js"></script> 
 
+// Add Server to Your Webflow Project and add a Releases for the version 1
+~$ <script defer src="https://cdn.jsdelivr.net/gh/crystalthedeveloper/first-step@1/dist/app.js"></script>
+
 
 // Migrating from github to jsDelivr
 ~$ https://www.jsdelivr.com/github
