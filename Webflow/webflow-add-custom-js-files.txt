@@ -1,15 +1,26 @@
 
+// NPM (Node Package Manager) in a project involves creating a package.json file in the project's root directory
+~$ npm init
 
+// Run the command to install Parcel
+npm i parcel
+
+//Update the Package.Json file with a Start Command
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel app.js"
+  },
+  
 // Add the Local Server to Your Webflow Project
-<script src="http://localhost:1234/app.js"></script> 
+~$ <script src="http://localhost:1234/app.js"></script> 
 
 
-// Migrating from githun to jsDelivr
-https://www.jsdelivr.com/github
+// Migrating from github to jsDelivr
+~$ https://www.jsdelivr.com/github
 
 
 // load any GitHub release, commit, or branch
-https://cdn.jsdelivr.net/gh/user/repo@version/file
+~$ https://cdn.jsdelivr.net/gh/user/repo@version/file
 
 
 // note: source
