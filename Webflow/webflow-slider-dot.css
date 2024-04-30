@@ -1,0 +1,13 @@
+.w-slider-dot {
+    background: none !important;
+    border: 3px solid #113838 !important;
+
+}
+
+.w-slider-dot.w-active {
+
+    color: #d5ef00 !important;
+    background: #d5ef00 !important;
+    border: 3px solid #d5ef00 !important;
+
+}
